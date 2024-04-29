@@ -1,0 +1,29 @@
+body{
+    animation-duration: initial;
+}
+
+.card-product{
+    width: 18rem;
+}
+.img-product{
+    height: 16rem;
+}
+.img-product:hover{
+    cursor: pointer;
+    filter:brightness(0.5);
+}
+.quantity-input{
+    width: 5rem;
+}
+
+@media (max-width: 800px) {
+    .card-product{
+        width: 11rem;
+    }
+    .img-product{
+        height: 9rem;
+    }
+    .quantity-input{
+        width: 3rem;
+    }
+}
