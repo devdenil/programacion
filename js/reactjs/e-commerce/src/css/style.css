@@ -1,0 +1,375 @@
+:root,
+[data-bs-theme=light] {
+    --bg-c: #303846;
+    --f-c: #fff;
+    --bg-cc: #09d3ac;
+
+    .btn {
+        background-color: transparent;
+        color: var(--bg-cc);
+        border: 1px solid var(--bg-cc);
+    }
+
+    .btn:hover {
+        background-color: var(--bg-cc);
+        color: var(--f-c);
+    }
+
+    .drawer {
+        background-color: var(--bg-c);
+    }
+
+    .drawer .navbar-brand,
+    .drawer .nav-link {
+        color: var(--f-c);
+    }
+
+    .drawer .nav-link:hover {
+        color: var(--bg-cc);
+    }
+
+    .navbar,
+    .navbar .dropdown-menu {
+        background-color: var(--bg-c);
+    }
+
+    .navbar .nav-link,
+    .navbar .dropdown-item {
+        color: var(--f-c);
+    }
+
+    .navbar .dropdown-item:hover {
+        background-color: transparent;
+    }
+
+    .navbar .dropdown-item:hover {
+        color: var(--bg-cc);
+    }
+
+    .page-link {
+        background-color: var(--bg-c);
+        color: var(--f-c);
+        border: 1px solid var(--f-c);
+    }
+
+    .page-link:hover {
+        background-color: var(--f-c);
+        color: var(--bg-c);
+        border: 1px solid var(--bg-c);
+    }
+}
+
+[data-bs-theme=dark] {
+    --bg-c: #191c24;
+    --f-c: #6c7293;
+    --f-c-h: #fff;
+    --bg-cc: #0090e7;
+
+    body {
+        background-color: #000000;
+    }
+
+    .btn {
+        background-color: transparent;
+        color: var(--bg-cc);
+        border: 1px solid var(--bg-cc);
+    }
+
+    .btn:hover {
+        background-color: var(--bg-cc);
+        color: var(--f-c-h);
+    }
+
+    .drawer {
+        background-color: var(--bg-c);
+    }
+
+    .drawer .navbar-brand,
+    .drawer .nav-link {
+        color: var(--f-c);
+    }
+
+    .drawer .nav-link:hover {
+        color: var(--f-c-h);
+    }
+
+    .navbar,
+    .navbar .dropdown-menu {
+        background-color: var(--bg-c);
+    }
+
+    .navbar .nav-link {
+        color: var(--f-c-h);
+    }
+
+    .navbar .dropdown-item {
+        color: var(--f-c);
+    }
+
+    .navbar .dropdown-item:hover {
+        background-color: transparent;
+    }
+
+    .navbar .dropdown-item:hover {
+        color: var(--f-c-h);
+    }
+
+    .page-link {
+        background-color: var(--bg-c);
+        color: var(--f-c);
+        border: 1px solid var(--f-c);
+    }
+
+    .page-link:hover {
+        background-color: var(--f-c);
+        color: var(--bg-c);
+        border: 1px solid var(--bg-c);
+    }
+}
+
+.drawer-reponsive {
+    display: none;
+}
+
+.loading {
+    background: #0000004b;
+    position: absolute;
+    z-index: 10010;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.loading .spinner-border {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    margin: -25px 0 0 -25px;
+}
+
+.loading .text-loading {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    margin: -25px 0 0 -25px;
+}
+
+.alert {
+    z-index: 10010;
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.edit-photo-text {
+    position: relative;
+    bottom: 50%;
+    left: 25%;
+}
+
+.drawer {
+    height: 100vh;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    z-index: 10;
+}
+
+.drawer:hover {
+    width: 200px;
+}
+
+.drawer .nav-link {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.drawer .nav-link .text {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 60px;
+    transition: opacity 0.3s;
+    color: var(--f-c);
+}
+
+.drawer:hover .nav-link .text {
+    display: block;
+    opacity: 1;
+}
+
+.drawer .nav-link .text:hover {
+    color: var(--f);
+}
+
+.navbar {
+    position: relative;
+}
+
+.justify-content-between {
+    margin: 0 60px;
+}
+
+.nav-profile {
+    width: 40px;
+    height: 40px;
+}
+
+.card-img-top {
+    cursor: pointer;
+}
+
+.hero-section {
+    position: relative;
+    height: 85vh;
+    color: var(--f);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-overlay {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    animation: slideInUp 2s forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.info-section p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.arrow .fa-angles-down {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.carousel {
+    width: 70%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+    object-fit: cover;
+    max-height: 70vh;
+}
+
+.carousel-caption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    margin: 0;
+    color: white;
+}
+
+.product {
+    width: 300px;
+}
+
+/*@media (max-width: 992px) {*/
+@media (max-width: 700px) {
+    .drawer-reponsive {
+        display: block;
+    }
+
+    .navbar {
+        margin-left: 0;
+    }
+
+    .drawer {
+        display: none;
+    }
+
+    .drawer.show {
+        display: block;
+    }
+
+    .drawer .nav-link {
+        width: 100%;
+    }
+
+    .drawer .nav-link i {
+        margin-right: 10px;
+    }
+
+    .drawer .nav-link .text {
+        display: inline;
+        opacity: 1;
+        position: static;
+        margin-left: 10px;
+        transition: none;
+    }
+
+    .product {
+        width: 175px;
+    }
+
+    .pagination{
+        overflow: auto;
+        white-space: nowrap;
+    }
+}
